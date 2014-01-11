@@ -1,0 +1,7 @@
+{
+  "repo": "test/test",
+  "styles": [
+    "in.css",
+    "module.css"
+  ]
+}

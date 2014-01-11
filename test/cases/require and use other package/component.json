@@ -1,0 +1,12 @@
+{
+  "repo": "something",
+  "styles": [
+    "in.css"
+  ],
+  "paths": [
+    "."
+  ],
+  "local": [
+    "other"
+  ]
+}
