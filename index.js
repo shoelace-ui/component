@@ -43,7 +43,12 @@ Shoelace.prototype.load = function(pkg) {
 
   styles.forEach(function(file) {
     var style = name + '/' + file;
-    if (!mods[name]) mods[name] = style;
+
+    // alias the first file in the package
+    if (!mods[name]) {
+      mods[name] = style;
+      if (pkg.parent && pkg.config.name) mods[pkg.parent.config.repo + '/deps/' + pkg.config.name] = style;
+    }
 
     mods[style.replace('.styl', '')] = style;
     mods[style] = get;

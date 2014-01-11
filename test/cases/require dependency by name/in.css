@@ -1,5 +1,5 @@
 :require
-  other: other-user/repo2
+  other: repo2
 
 :content
   from: $other

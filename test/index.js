@@ -3,6 +3,7 @@
  * Module dependencies.
  */
 
+var should = require('should');
 var shoelace = require('..');
 var Builder = require('component-builder');
 var readdir = require('fs').readdirSync;
