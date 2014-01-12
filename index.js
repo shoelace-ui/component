@@ -37,7 +37,7 @@ Shoelace.prototype.load = function(pkg) {
 
   var mods = this.modules;
 
-  var name = pkg.config.repo || pkg.config.name;
+  var name = (pkg.config.repo || pkg.config.name).replace('/', '-');
   if (!name) throw new Error('component.json missing repo property');
   if (pkg.root) mods['index'] = name;
 
@@ -47,7 +47,7 @@ Shoelace.prototype.load = function(pkg) {
     // alias the first file in the package
     if (!mods[name]) {
       mods[name] = style;
-      if (pkg.parent && pkg.config.name) mods[pkg.parent.config.repo + '/deps/' + pkg.config.name] = style;
+      if (pkg.parent && pkg.config.name) mods[(pkg.parent.config.repo).replace('/', '-') + '/deps/' + pkg.config.name] = style;
     }
 
     mods[style.replace('.styl', '')] = style;
