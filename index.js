@@ -2,12 +2,14 @@
  * Module dependencies.
  */
 
+var prefixer = require('autoprefixer')().rework;
 var rework = require('rework');
 var mixins = require('rework-mixins');
 var calc = require('rework-calc');
 var breakpoints = require('rework-breakpoints');
 var modules = require('rework-modules');
-var myth = require('myth');
+var color = require('rework-color-function');
+var media = require('rework-media-selector');
 var fs = require('fs');
 var path = require('path');
 var read = fs.readFileSync;
@@ -58,7 +60,7 @@ Shoelace.prototype.load = function(pkg) {
       if (cache) return cache;
       cache = read(pkg.path(file), 'utf8');
       return cache;
-    };
+    }
   });
   pkg.config.styles = [];
 };
@@ -70,9 +72,12 @@ Shoelace.prototype.build = function(fn) {
     .use(rework.colors())
     .use(rework.references())
     .use(rework.mixins(mixins))
+    .use(media())
+    .use(color)
     .use(breakpoints)
-    .use(myth)
-    .use(calc);
+    .use(calc)
+    .use(prefixer);
 
   fn(null, out.toString());
 };
+

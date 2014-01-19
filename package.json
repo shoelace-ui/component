@@ -1,6 +1,6 @@
 {
   "name": "shoelace-component",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Opinionated shoelace builder",
   "main": "index.js",
   "scripts": {
@@ -16,16 +16,18 @@
     "url": "https://github.com/shoelace-ui/component/issues"
   },
   "dependencies": {
+    "autoprefixer": "~0.8.20131209",
+    "rework": "~0.20.2",
     "rework-calc": "~0.2.1",
     "rework-breakpoints": "~0.4.0",
     "rework-mixins": "~1.1.1",
     "rework-modules": "~0.1.0",
-    "component-builder": "~0.11.2",
-    "myth": "~0.3.0",
-    "rework": "~0.20.2",
-    "debug": "~0.7.4"
+    "rework-color-function": "~0.1.2",
+    "rework-media-selector": "~0.1.0",
+    "component-builder": "~0.11.2"
   },
   "devDependencies": {
+    "debug": "~0.7.4",
     "should": "~2.1.1",
     "mocha": "~1.17.0"
   }
