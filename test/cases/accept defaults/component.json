@@ -1,0 +1,7 @@
+{
+  "repo": "user/repo",
+  "name": "repo",
+  "styles": [
+    "in.css"
+  ]
+}

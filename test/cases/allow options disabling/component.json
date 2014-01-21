@@ -1,0 +1,12 @@
+{
+  "repo": "user/repo",
+  "name": "repo",
+  "styles": [
+    "in.css"
+  ],
+  "options": {
+    "palette": {
+      "disable": true
+    }
+  }
+}

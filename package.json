@@ -19,12 +19,14 @@
     "autoprefixer": "~0.8.20131209",
     "rework": "~0.20.2",
     "rework-calc": "~0.2.1",
-    "rework-breakpoints": "~0.4.0",
+    "rework-breakpoints": "~0.6.0",
     "rework-mixins": "~1.1.1",
     "rework-modules": "~0.1.0",
     "rework-color-function": "~0.1.2",
     "rework-media-selector": "~0.1.0",
-    "component-builder": "~0.11.2"
+    "rework-palette": "0.0.1",
+    "type-component": "0.0.1",
+    "merge": "~1.1.2"
   },
   "devDependencies": {
     "debug": "~0.7.4",

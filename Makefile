@@ -1,5 +1,6 @@
 test:
-	@DEBUG=*shoelace ./node_modules/.bin/mocha \
-	  --require should
+	@DEBUG=shoelace-component:* ./node_modules/.bin/mocha \
+	  --watch \
+	  --require should 
 
 .PHONY: test
